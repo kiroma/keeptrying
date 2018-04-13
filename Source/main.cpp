@@ -25,8 +25,7 @@ int main(int argc, char **argv)
 	short desired = 0;
 	if(argc == 3)
 	{
-		stringstream s(argv[2]);
-		s >> desired;
+		desired = atoi(argv[2]);
 	}
 	while(system(argv[1]) != desired)
 		cout << "Retrying";

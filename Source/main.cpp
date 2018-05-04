@@ -12,7 +12,7 @@ void print_usage()
 
 int main(int argc, char **argv)
 {
-	if(argc <2)
+	if(argc<2)
 	{
 		print_usage();
 		return 1;
@@ -22,13 +22,13 @@ int main(int argc, char **argv)
 		print_usage();
 		return 1;
 	}
-	short desired = 0;
-	if(argc == 3)
+	short desired=0;
+	if(argc==3)
 	{
 		desired = atoi(argv[2]);
 	}
-	while(system(argv[1]) != desired)
-		cout << "Retrying";
+	while(system(argv[1])!=desired)
+		cout << "Retrying\n";
 	return 0;
 }
 
